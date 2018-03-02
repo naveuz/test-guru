@@ -3,11 +3,5 @@ class Question < ApplicationRecord
   has_many :answers
 
   validates :body, presence: true
-  validate :validate_answer_count
-
-  private
-
-  def validate_answer_count
-    errors.add(:answers, 'Должно быть от 1 до 4') unless (1..4).cover?(answers.size)
-  end
+  validates :answers, length: { in: 1..4 }
 end

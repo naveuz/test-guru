@@ -10,13 +10,14 @@ class Test < ApplicationRecord
   validates :title, uniqueness: { scope: :level }
 
   scope :by_level, ->(level) { where(level: level) }
-  scope :easy_level, -> { where(level: 0..1) }
-  scope :medium_level, -> { where(level: 2..4) }
-  scope :hard_level, -> { where(level: 5..Float::INFINITY) }
+  scope :easy_level, -> { by_level(0..1) }
+  scope :medium_level, -> { by_level(2..4) }
+  scope :hard_level, -> { by_level(5..Float::INFINITY) }
+  scope :by_category, ->(category) { joins(:category)
+                                    .where(categories: { title: category })
+                                    .order('tests.title DESC') }
 
   def self.titles_of_category(title)
-    Test.joins(:category)
-        .where(categories: { title: title })
-        .order('tests.title DESC').pluck(:title)
+    by_category(title).pluck(:title)
   end
 end
