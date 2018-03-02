@@ -6,14 +6,24 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+users = User.create([
+     { name: 'User1', email: 'test@test.net', password: '123456' },
+     { name: 'User2', email: 'info@info.com', password: 'abcde' }
+                    ])
+
+admins = Admin.create([
+     { name: 'admin1', email: 'test@test.net', password: '123456' },
+     { name: 'admin2', email: 'info@info.com', password: 'abcde' }
+                    ])
+
 categories = Category.create([{title: 'Литература'},
                               {title: 'История'},
                               {title: 'География'}])
 
 tests = Test.create([
-     { title: 'Русские писатели', level: 1, category_id: categories[0].id },
-     { title: 'Исторические даты', level: 2, category_id: categories[1].id },
-     { title: 'Столицы стран мира', level: 3, category_id: categories[2].id }
+     { title: 'Русские писатели', level: 1, category_id: categories[0].id, admin_id: admins[0].id },
+     { title: 'Исторические даты', level: 2, category_id: categories[1].id, admin_id: admins[0].id },
+     { title: 'Столицы стран мира', level: 3, category_id: categories[2].id, admin_id: admins[1].id }
                     ])
 
 questions = Question.create([
@@ -45,11 +55,6 @@ Answer.create([
      { body: 'Барселона', correct: false, question_id: questions[5].id },
      { body: 'Будапешт', correct: false, question_id: questions[5].id }
               ])
-
-users = User.create([
-     { name: 'User1', email: 'test@test.net', password: '123456' },
-     { name: 'User2', email: 'info@info.com', password: 'abcde' }
-                    ])
 
 PassingTest.create([
      { user_id: users[0].id, test_id: tests[1].id },
