@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :find_test, only: %i[index]
-  before_action :find_question, only: %i[show]
+  before_action :find_question, only: %i[show destroy]
 
   def index
     render inline: "<% @test.questions.each do |question| %>
@@ -9,7 +9,8 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    render inline: @question.body
+    render inline: "<%= @question.body %>
+                    <%= button_to 'Удалить', question_path, method: :delete %>"
   end
 
   def new; end
@@ -17,6 +18,11 @@ class QuestionsController < ApplicationController
   def create
     Question.create(question_params)
     redirect_to test_questions_path
+  end
+
+  def destroy
+    @question.destroy
+    render plain: 'Вопрос удален.'
   end
 
   private
