@@ -1,0 +1,6 @@
+<h3>Добавление вопроса</h3>
+<form action="<%= test_questions_path %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="text" name="body">
+  <input type="submit">
+</form>

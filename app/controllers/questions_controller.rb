@@ -12,6 +12,13 @@ class QuestionsController < ApplicationController
     render inline: @question.body
   end
 
+  def new; end
+
+  def create
+    Question.create(question_params)
+    redirect_to test_questions_path
+  end
+
   private
 
   def find_test
@@ -20,5 +27,9 @@ class QuestionsController < ApplicationController
 
   def find_question
     @question = Question.find(params[:id])
+  end
+
+  def question_params
+    params.permit(:body, :test_id)
   end
 end
