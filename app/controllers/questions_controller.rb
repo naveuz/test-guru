@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index]
+  before_action :find_test, only: %i[index create]
   before_action :find_question, only: %i[show destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_question_not_found
 
@@ -17,7 +17,7 @@ class QuestionsController < ApplicationController
   def new; end
 
   def create
-    Question.create(question_params)
+    @test.questions.create(question_params)
     redirect_to test_questions_path
   end
 
@@ -37,7 +37,7 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.permit(:body, :test_id)
+    params.permit(:body)
   end
 
   def rescue_question_not_found
