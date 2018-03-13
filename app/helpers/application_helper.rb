@@ -12,8 +12,6 @@ module ApplicationHelper
   end
 
   def github_url(author, repo)
-    render html: "<a href=\"https://github.com/#{author}/#{repo}\">
-                    Test Guru
-                  </a>".html_safe
+    link_to 'Test Guru', "https://github.com/#{author}/#{repo}", target: :blank
   end
 end
