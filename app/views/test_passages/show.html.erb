@@ -1,4 +1,8 @@
 <h1>Прохождение теста <%= @test_passage.test.title %></h1>
+<p>
+  Вопрос <%= @test_passage.question_number %> из
+         <%= @test_passage.question_count %>
+</p>
 <h3><%= @test_passage.current_question.body %></h3>
 <%= form_with url: test_passage_path(@test_passage), local: true,
  method: :put do |form| %>
