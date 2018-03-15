@@ -56,7 +56,7 @@ Answer.create([
      { body: 'Будапешт', correct: false, question_id: questions[5].id }
               ])
 
-PassingTest.create([
+TestPassage.create([
      { user_id: users[0].id, test_id: tests[1].id },
      { user_id: users[0].id, test_id: tests[2].id },
      { user_id: users[1].id, test_id: tests[0].id }
