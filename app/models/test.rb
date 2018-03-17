@@ -2,8 +2,8 @@ class Test < ApplicationRecord
   belongs_to :category
   belongs_to :admin
   has_many :questions
-  has_many :passing_tests
-  has_many :users, through: :passing_tests
+  has_many :test_passages
+  has_many :users, through: :test_passages
 
   validates :title, presence: true
   validates :level, numericality: { only_integer: true }
