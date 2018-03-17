@@ -1,11 +1,11 @@
 module TestPassagesHelper
   def result_passage(result)
     if @test_passage.passed?
-      "<span style='color: green'>#{result}%</span>
-      Тест успешно пройден".html_safe
+      content_tag(:span, "#{result}", style: "color: green") <<
+        ' Тест успешно пройден'
     else
-      "<span style='color: red'>#{result}%</span>
-      Тест не пройден".html_safe
+      content_tag(:span, "#{result}", style: "color: red") <<
+        ' Тест не пройден'
     end
   end
 end

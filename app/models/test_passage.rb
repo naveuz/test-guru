@@ -10,7 +10,7 @@ class TestPassage < ApplicationRecord
   end
 
   def passed?
-    success_percent > 84
+    success_percent >= 85
   end
 
   def question_count
