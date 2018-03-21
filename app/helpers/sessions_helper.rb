@@ -1,4 +1,6 @@
 module SessionsHelper
+  private
+
   def sign_in(user)
     session[:user_id] = user.id
   end
@@ -9,7 +11,10 @@ module SessionsHelper
   end
 
   def authenticate_user!
-    redirect_to sign_in_path unless signed_in?
+    unless signed_in?
+      cookies[:path] = request.fullpath
+      redirect_to sign_in_path
+    end
   end
 
   def current_user
