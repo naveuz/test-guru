@@ -17,7 +17,7 @@ class TestsController < ApplicationController
   private
 
   def find_user
-    @user = User.first
+    @user = current_user
   end
 
   def find_test
