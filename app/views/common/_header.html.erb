@@ -2,7 +2,7 @@
   <% if signed_in? %>
     <h1>
       Welcome, <%= current_user.email %>
-      <%= content_tag :a, 'Guru', href: root_path %>
+      <%= link_to 'Guru', root_path %>
     </h1>
     <p>
       <%= link_to 'Выйти', sign_out_path, method: :delete %>
