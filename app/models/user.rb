@@ -15,4 +15,8 @@ class User < ApplicationRecord
   def test_passage(test)
     test_passages.order(created_at: :desc).find_by(test: test)
   end
+
+  def admin?
+    self.is_a? Admin
+  end
 end
