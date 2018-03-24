@@ -8,13 +8,13 @@ class Admin::TestsController < Admin::BaseController
   def show; end
 
   def new
-    @test = Test.new
+    @test = current_user.authored_tests.build
   end
 
   def edit; end
 
   def create
-    @test = Test.new(test_params)
+    @test = current_user.authored_tests.build(test_params)
 
     if @test.save
       redirect_to [:admin, @test]
