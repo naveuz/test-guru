@@ -1,3 +1,3 @@
-<h3><%= link_to "#{test.title}", test_path(test) %></h3>
+<h3><%= test.title %></h3>
 <p>Вопросов:<%= test.questions.size %></p>
 <%= button_to 'Старт', start_test_path(test) %>

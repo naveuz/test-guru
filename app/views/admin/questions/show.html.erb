@@ -1,0 +1,11 @@
+<h2><%= @question.body %></h2>
+<h4>Список ответов:</h4>
+<%= link_to 'Добавить ответ', new_admin_question_answer_path(@question) %>
+<ol>
+  <%= render @question.answers %>
+</ol>
+<%= link_to 'Назад', admin_test_path(@question.test) %> |
+<%= link_to 'Изменить', edit_admin_question_path(@question) %> |
+<%= link_to 'Удалить', admin_question_path(@question),
+             method: :delete,
+             data: { confirm: 'Вы уверены?' } %>

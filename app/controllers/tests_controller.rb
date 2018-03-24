@@ -6,8 +6,6 @@ class TestsController < ApplicationController
     @tests = Test.all
   end
 
-  def show; end
-
   def start
     user = current_user
     user.tests.push(@test)
