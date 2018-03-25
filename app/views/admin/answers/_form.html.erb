@@ -1,0 +1,14 @@
+<h3><%= answer_header(@answer) %></h3>
+<%= form_with model: [:admin, @question, @answer], local: true do |form| %>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body, rows: 3, cols: 20 %>
+  </p>
+  <p>
+    <%= form.label :correct %>
+    <%= form.check_box :correct %>
+  </p>
+  <p>
+    <%= form.submit 'Сохранить' %>
+  </p>
+<% end %>

@@ -1,5 +1,3 @@
-class Admin < ApplicationRecord
-  has_many :tests
+class Admin < User
 
-  validates :email, :password, presence: true
 end

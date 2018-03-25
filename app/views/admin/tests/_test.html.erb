@@ -1,0 +1,9 @@
+<tr>
+  <td><h3><%= test.title %></h3></td>
+  <td><%= test.questions.size %></td>
+  <td><%= link_to 'Show', admin_test_path(test) %></td>
+  <td><%= link_to 'Edit', edit_admin_test_path(test) %></td>
+  <td><%= link_to 'Destroy', admin_test_path(test),
+                            method: :delete,
+                            data: { confirm: 'Вы уверены?' } %></td>
+</tr>

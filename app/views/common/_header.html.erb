@@ -1,17 +1,17 @@
 <div>
-  <% if signed_in? %>
+  <% if user_signed_in? %>
     <h1>
       Welcome, <%= current_user.email %>
       <%= link_to 'Guru', root_path %>
     </h1>
     <p>
-      <%= link_to 'Выйти', sign_out_path, method: :delete %>
+      <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
     </p>
   <% else %>
     <h1>Test Guru</h1>
     <p>
-      <%= link_to 'Войти', sign_in_path %> |
-      <%= link_to 'Регистрация', sign_up_path %>
+      <%= link_to 'Войти', new_user_session_path %> |
+      <%= link_to 'Регистрация', new_user_registration_path %>
     </p>
   <% end %>
 </div>

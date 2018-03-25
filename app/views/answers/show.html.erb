@@ -1,7 +1,0 @@
-<h2><%= @answer.body %></h2>
-<p>Correct: <%= @answer.correct %></p>
-<%= link_to 'Назад', question_path(@answer.question) %> |
-<%= link_to 'Изменить', edit_answer_path(@answer) %> |
-<%= link_to 'Удалить', answer_path(@answer),
-             method: :delete,
-             data: { confirm: 'Вы уверены?' } %>
