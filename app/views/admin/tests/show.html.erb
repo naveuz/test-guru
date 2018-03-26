@@ -1,11 +1,13 @@
 <h2><%= @test.title %></h2>
 <p>
-  Уровень: <%= @test.level %>
-  Категория: <%= @test.category.title %>
+  <%= t('.level') %>
+  <%= @test.level %>
+  <%= t('.category') %>
+  <%= @test.category.title %>
 </p>
-<h4>Список вопросов:</h4>
-<%= link_to 'Добавить вопрос', new_admin_test_question_path(@test) %>
+<h4><%= t('.questions') %></h4>
+<%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
 <ol>
   <%= render @test.questions %>
 </ol>
-<%= link_to 'Назад', admin_tests_path %> |
+<%= link_to t('.back'), admin_tests_path %>

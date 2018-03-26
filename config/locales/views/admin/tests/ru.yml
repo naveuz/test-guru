@@ -1,0 +1,45 @@
+ru:
+  admin:
+    tests:
+      index:
+        header: 'Список тестов'
+        new_test: 'Добавить тест'
+        title: 'Название'
+        questions: 'Вопросов'
+        actions: 'Действия'
+      new:
+        header: 'Создание теста'
+        back: 'Назад'
+      edit:
+        header: 'Обновление теста'
+        back: 'Назад'
+      show:
+        questions: 'Список вопросов:'
+        level: 'Уровень:'
+        category: 'Категория:'
+        back: 'Назад'
+        new_question: 'Добавить вопрос'
+      test:
+        confirm: 'Вы уверены?'
+        show: 'Показать'
+        edit: 'Редактировать'
+        destroy: 'Удалить'
+      create:
+        success: 'Тест добавлен'
+      update:
+        success: 'Тест обновлен'
+      destroy:
+        success: 'Тест удален'
+
+  helpers:
+    submit:
+      test:
+        create: 'Создать тест'
+        update: 'Обновить тест'
+    select:
+      prompt: 'Выберите:'
+    label:
+      test:
+        title: 'Название'
+        level: 'Уровень'
+        category_id: 'Категория'

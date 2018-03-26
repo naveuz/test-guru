@@ -1,9 +1,7 @@
 <div>
   <hr>
   <%= current_year %> |
-  <span>Александр Зуев</span> |
+  <span><%= t('.author') %></span> |
   <%= github_url('naveuz', 'test-guru') %> |
-  <a href="http://thinknetica.com/" target="_blank">
-    Учебный проект в онлайн-школе Thinknetica
-  </a>
+  <%= link_to t('.school'), 'http://thinknetica.com/', target: :blank %>
 </div>

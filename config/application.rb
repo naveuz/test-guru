@@ -14,6 +14,8 @@ module TestGuru
     config.time_zone = 'Moscow'
     config.i18n.default_locale = :ru
 
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

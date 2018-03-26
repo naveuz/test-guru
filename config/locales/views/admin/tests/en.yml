@@ -1,0 +1,45 @@
+en:
+  admin:
+    tests:
+      index:
+        header: 'Tests list'
+        new_test: 'Add test'
+        title: 'Title'
+        questions: 'Question'
+        actions: 'Actions'
+      new:
+        header: 'Create test'
+        back: 'Back'
+      edit:
+        header: 'Update test'
+        back: 'Back'
+      show:
+        questions: 'Questions list:'
+        level: 'Level:'
+        category: 'Category:'
+        back: 'Back'
+        new_question: 'Add question'
+      test:
+        confirm: 'Are you sure?'
+        show: 'Show'
+        edit: 'Edit'
+        destroy: 'Destroy'
+      create:
+        success: 'Test saved'
+      update:
+        success: 'Test updated'
+      destroy:
+        success: 'Test deleted'
+
+  helpers:
+    submit:
+      test:
+        create: 'Create test'
+        update: 'Update test'
+    select:
+      prompt: 'Select:'
+    label:
+      test:
+        title: 'Title'
+        level: 'Level'
+        category_id: 'Category'
