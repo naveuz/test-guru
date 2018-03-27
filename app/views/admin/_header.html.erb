@@ -1,3 +1,4 @@
-<h1>Admin::Panel</h1>
-<p><%= link_to 'Выйти', destroy_user_session_path, method: :delete %></p>
+<h1><%= t('.header') %></h1>
+<p><%= current_user.email %></p>
+<p><%= link_to t('.logout'), destroy_user_session_path, method: :delete %></p>
 <hr>

@@ -1,0 +1,27 @@
+en:
+  layouts:
+    application:
+      title: 'Test Guru'
+    admin:
+      title: 'Admin Panel | Test Guru'
+
+  common:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+    header:
+      welcome: 'Welcome'
+      guru: 'Guru'
+      header: 'Test Guru'
+      login: 'Login'
+      logout: 'Logout'
+      signup: 'Registration'
+    footer:
+      author: 'Alexander Zuev'
+      school: 'Online school Thinknetica'
+
+  admin:
+    header:
+      header: "Admin Panel"
+      logout: 'Logout'

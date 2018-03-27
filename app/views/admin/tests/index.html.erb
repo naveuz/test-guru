@@ -1,10 +1,10 @@
-<h2>Список тестов</h2>
-<p><%= link_to 'Добавить тест', new_admin_test_path %></p>
+<h2><%= t('.header') %></h2>
+<p><%= link_to t('.new_test'), new_admin_test_path %></p>
 <table>
   <tr>
-    <th>Title</th>
-    <th>Questions</th>
-    <th colspan="3">Actions</th>
+    <th><%= t('.title') %></th>
+    <th><%= t('.questions') %></th>
+    <th colspan="3"><%= t('.actions') %></th>
   </tr>
   <%= render @tests %>
 </table>

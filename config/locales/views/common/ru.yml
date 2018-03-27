@@ -1,0 +1,28 @@
+ru:
+  layouts:
+    application:
+      title: 'Тест Гуру'
+    admin:
+      title: 'Панель администратора | Тест Гуру'
+
+  common:
+    errors:
+      header:
+        one: "Обнаружена %{count} ошибка"
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+    header:
+      welcome: 'Добро пожаловать'
+      guru: 'Гуру'
+      header: 'Тест Гуру'
+      login: 'Войти'
+      logout: 'Выйти'
+      signup: 'Регистрация'
+    footer:
+      author: 'Александр Зуев'
+      school: 'Онлайн школа Thinknetica'
+
+  admin:
+    header:
+      header: "Панель Администратора"
+      logout: 'Выйти'
