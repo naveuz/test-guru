@@ -1,4 +1,6 @@
 module ApplicationHelper
+  ALERTS = { notice: 'success', alert: 'danger' }.freeze
+
   def current_year
     Date.current.year
   end
@@ -7,7 +9,7 @@ module ApplicationHelper
     link_to 'Test Guru', "https://github.com/#{author}/#{repo}", target: :blank
   end
 
-  def flash_message(type, message)
-    content_tag :p, message, class: type
+  def alert(type)
+    ALERTS[type.to_sym]
   end
 end

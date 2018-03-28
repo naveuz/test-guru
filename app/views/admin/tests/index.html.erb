@@ -1,10 +1,10 @@
-<h2><%= t('.header') %></h2>
-<p><%= link_to t('.new_test'), new_admin_test_path %></p>
-<table>
+<h3 class="my-3"><%= t('.header') %></h3>
+<p><%= link_to t('.new_test'), new_admin_test_path, class: "btn btn-info" %></p>
+<table class="table table-bordered table-sm">
   <tr>
-    <th><%= t('.title') %></th>
-    <th><%= t('.questions') %></th>
-    <th colspan="3"><%= t('.actions') %></th>
+    <th scope="col"><%= t('.title') %></th>
+    <th scope="col"><%= t('.questions') %></th>
+    <th scope="col"><%= t('.actions') %></th>
   </tr>
   <%= render @tests %>
 </table>
