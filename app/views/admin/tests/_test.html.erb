@@ -1,9 +1,11 @@
 <tr>
-  <td><h3><%= test.title %></h3></td>
+  <td><%= test.title %></td>
   <td><%= test.questions.size %></td>
-  <td><%= link_to t('.show'), admin_test_path(test) %></td>
-  <td><%= link_to t('.edit'), edit_admin_test_path(test) %></td>
-  <td><%= link_to t('.destroy'), admin_test_path(test),
+  <td>
+    <%= link_to t('.show'), admin_test_path(test), class: "btn btn-primary btn-sm" %>
+    <%= link_to t('.edit'), edit_admin_test_path(test), class: "btn btn-success btn-sm" %>
+    <%= link_to t('.destroy'), admin_test_path(test), class: "btn btn-danger btn-sm",
                                 method: :delete,
-                                data: { confirm: t('.confirm') } %></td>
+                                data: { confirm: t('.confirm') } %>
+  </td>
 </tr>

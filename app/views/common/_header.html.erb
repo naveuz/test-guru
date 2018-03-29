@@ -1,19 +1,16 @@
-<div>
-  <% if user_signed_in? %>
-    <h1>
+<nav class="navbar navbar-dark bg-dark">
+  <%= link_to t('.header'), root_path, class: "navbar-brand" %>
+  <span class="navbar-text">
+    <% if user_signed_in? %>
       <%= t('.welcome') %>
-      <%= current_user.email %>
-      <%= link_to t('.guru'), root_path %>
-    </h1>
-    <p>
+      <b><%= current_user.email %></b> |
+      <% if current_user.admin? %>
+        <%= link_to t('.panel'), admin_root_path %> |
+      <% end %>
       <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
-    </p>
-  <% else %>
-    <h1><%= t('.header') %></h1>
-    <p>
+    <% else %>
       <%= link_to t('.login'), new_user_session_path %> |
       <%= link_to t('.signup'), new_user_registration_path %>
-    </p>
-  <% end %>
-</div>
-<hr>
+    <% end %>
+  </span>
+</nav>

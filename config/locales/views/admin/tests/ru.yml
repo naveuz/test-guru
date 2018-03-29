@@ -2,6 +2,7 @@ ru:
   admin:
     tests:
       index:
+        unauthorized: 'У вас нет прав на просмотр страницы'
         header: 'Список тестов'
         new_test: 'Добавить тест'
         title: 'Название'

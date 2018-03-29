@@ -17,11 +17,13 @@ en:
       login: 'Login'
       logout: 'Logout'
       signup: 'Registration'
+      panel: 'Admin Panel'
     footer:
       author: 'Alexander Zuev'
       school: 'Online school Thinknetica'
 
   admin:
     header:
-      header: "Admin Panel"
+      panel: 'Admin Panel'
       logout: 'Logout'
+      header: 'Test Guru'

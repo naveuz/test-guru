@@ -1,4 +1,8 @@
-<h1><%= t('.header') %></h1>
-<p><%= current_user.email %></p>
-<p><%= link_to t('.logout'), destroy_user_session_path, method: :delete %></p>
-<hr>
+<nav class="navbar navbar-light bg-primary">
+  <%= link_to t('.header'), root_path, class: "navbar-brand text-white" %>
+  <h2 class="text-white"><%= t('.panel') %></h2>
+  <span class="navbar-text text-white">
+    <b><%= current_user.email %></b> |
+    <%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: "text-white" %>
+  </span>
+</nav>

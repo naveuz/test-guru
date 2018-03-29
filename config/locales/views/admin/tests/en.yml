@@ -2,6 +2,7 @@ en:
   admin:
     tests:
       index:
+        unauthorized: 'You are not authorized to view page'
         header: 'Tests list'
         new_test: 'Add test'
         title: 'Title'
