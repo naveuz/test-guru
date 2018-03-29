@@ -10,6 +10,6 @@ module ApplicationHelper
   end
 
   def alert(type)
-    ALERTS[type.to_sym]
+    ALERTS[type.to_sym] || 'warning'
   end
 end
