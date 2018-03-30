@@ -39,6 +39,8 @@ gem 'bootstrap', '~> 4.0.0'
 
 gem 'octokit', '~> 4.0'
 
+gem 'dotenv-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

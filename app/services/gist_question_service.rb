@@ -1,5 +1,5 @@
 class GistQuestionService
-  GITHUB_TOKEN = '7f31a58c6949008d3e84de22af34389f39ab2d28'
+  GITHUB_TOKEN = ENV['GITHUB_TOKEN']
 
   def initialize(question, client: nil)
     @question = question
