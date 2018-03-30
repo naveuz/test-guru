@@ -1,0 +1,10 @@
+<h3 class="my-3"><%= t('.header') %></h3>
+<table class="table table-bordered table-sm">
+  <tr>
+    <th scope="col"><%= t('.question') %></th>
+    <th scope="col"><%= t('.url') %></th>
+    <th scope="col"><%= t('.user_email') %></th>
+  </tr>
+  <%= render @gists %>
+</table>
+<%= link_to t('.back'), admin_root_path %>

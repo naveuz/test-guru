@@ -1,0 +1,9 @@
+en:
+  admin:
+    gists:
+      index:
+        header: 'Gists list'
+        question: 'Question'
+        url: 'Url gist'
+        user_email: 'User email'
+        back: 'Back'

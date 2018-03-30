@@ -8,6 +8,7 @@ en:
         title: 'Title'
         questions: 'Question'
         actions: 'Actions'
+        gists: 'Gists list'
       new:
         header: 'Create test'
         back: 'Back'
