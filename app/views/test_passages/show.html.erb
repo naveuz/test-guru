@@ -13,7 +13,7 @@
       <%= b.label %>
     </p>
   <% end %>
-
+  <p><%= link_to 'Gist question', gist_test_passage_path(@test_passage), method: :post %></p>
   <p>
     <%= link_to 'Отмена', tests_path, class: "btn btn-warning text-white" %>
     <%= form.submit 'Следующий', class: "btn btn-success" %>
