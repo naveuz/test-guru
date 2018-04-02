@@ -2,3 +2,7 @@ en:
   tests:
     index:
       header: 'Available tests'
+      title: 'Title'
+      questions: 'Questions'
+    test:
+      start: 'Start'

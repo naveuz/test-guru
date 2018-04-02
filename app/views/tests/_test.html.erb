@@ -1,9 +1,5 @@
-<div class="col-md-6 col-lg-4 mb-3">
-  <div class="card border-secondary">
-    <div class="card-body">
-      <h5><%= test.title %></h5>
-      <p>Вопросов:<%= test.questions.size %></p>
-      <%= button_to 'Старт', start_test_path(test), class: "btn btn-success" %>
-    </div>
-  </div>
-</div>
+<tr>
+  <td><%= test.title %></td>
+  <td><%= test.questions.size %></td>
+  <td><%= button_to t('.start'), start_test_path(test), class: "btn btn-success" %></td>
+</tr>

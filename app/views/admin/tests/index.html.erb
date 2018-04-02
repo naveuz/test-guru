@@ -2,9 +2,13 @@
 <p><%= link_to t('.new_test'), new_admin_test_path, class: "btn btn-info" %></p>
 <table class="table table-bordered table-sm">
   <tr>
-    <th scope="col"><%= t('.title') %></th>
-    <th scope="col"><%= t('.questions') %></th>
-    <th scope="col"><%= t('.actions') %></th>
+    <th class="sort-by-title pointer">
+      <%= t('.title') %>
+      <%= octicon 'arrow-up', class: 'text-success hide' %>
+      <%= octicon 'arrow-down', class: 'text-success hide' %>
+    </th>
+    <th><%= t('.questions') %></th>
+    <th><%= t('.actions') %></th>
   </tr>
   <%= render @tests %>
 </table>
