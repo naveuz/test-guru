@@ -1,0 +1,5 @@
+en:
+  test_passages:
+    gist:
+      success: "Gist was successfully created! %{url}"
+      failure: "An error occured while saving gist"

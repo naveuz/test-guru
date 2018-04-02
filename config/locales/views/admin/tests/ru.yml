@@ -8,6 +8,7 @@ ru:
         title: 'Название'
         questions: 'Вопросов'
         actions: 'Действия'
+        gists: 'Список gists'
       new:
         header: 'Создание теста'
         back: 'Назад'
