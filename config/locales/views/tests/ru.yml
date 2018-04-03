@@ -2,3 +2,7 @@ ru:
   tests:
     index:
       header: 'Доступные тесты'
+      title: 'Заголовок'
+      questions: 'Вопросов'
+    test:
+      start: 'Старт'

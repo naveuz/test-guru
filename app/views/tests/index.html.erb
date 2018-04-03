@@ -1,4 +1,13 @@
 <h2 class="text-center my-3"><%= t('.header') %></h2>
-<div class="row mt-2">
+<table class="table table-bordered">
+  <tr>
+    <th class="sort-by-title pointer">
+      <%= t('.title') %>
+      <%= octicon 'arrow-up', class: 'text-success hide' %>
+      <%= octicon 'arrow-down', class: 'text-success hide' %>
+    </th>
+    <th><%= t('.questions') %></th>
+    <th></th>
+  </tr>
   <%= render @tests %>
-</div>
+</table>
