@@ -3,6 +3,9 @@
   Вопрос <%= @test_passage.question_number %> из
          <%= @test_passage.question_count %>
 </p>
+<%= content_tag :progress, '', class: 'progress', value: '0', max: '100',
+                data: { question_number: @test_passage.question_number,
+                        question_count: @test_passage.question_count } %>
 <p><strong><%= @test_passage.current_question.body %></strong></p>
 <%= form_with url: test_passage_path(@test_passage), local: true,
   method: :put do |form| %>
