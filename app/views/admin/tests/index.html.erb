@@ -1,5 +1,6 @@
 <h3 class="my-3"><%= t('.header') %></h3>
 <p><%= link_to t('.new_test'), new_admin_test_path, class: "btn btn-info" %></p>
+<%= render 'common/errors', resource: @test %>
 <table class="table table-bordered table-sm">
   <tr>
     <th class="sort-by-title pointer">

@@ -21,6 +21,7 @@ en:
         category: 'Category:'
         back: 'Back'
         new_question: 'Add question'
+        edit: 'Edit'
       test:
         confirm: 'Are you sure?'
         show: 'Show'
@@ -30,8 +31,12 @@ en:
         success: 'Test saved'
       update:
         success: 'Test updated'
+      update_inline:
+        success: 'Test updated'
       destroy:
         success: 'Test deleted'
+      form_inline:
+        submit: 'Save'
 
   helpers:
     submit:
