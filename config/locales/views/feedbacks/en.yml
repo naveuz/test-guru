@@ -1,0 +1,15 @@
+ru:
+  feedbacks:
+    new:
+      header: 'Feedback'
+    create:
+      success: 'Message sent successfully'
+
+  helpers:
+    submit:
+      feedback:
+        create: 'Send'
+    label:
+      feedback:
+        title: 'Subject'
+        body: 'Message'

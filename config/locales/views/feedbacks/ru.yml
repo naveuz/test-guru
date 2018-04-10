@@ -1,0 +1,15 @@
+ru:
+  feedbacks:
+    new:
+      header: 'Обратная связь'
+    create:
+      success: 'Сообщение успешно отправлено'
+
+  helpers:
+    submit:
+      feedback:
+        create: 'Отправить'
+    label:
+      feedback:
+        title: 'Тема'
+        body: 'Сообщение'
