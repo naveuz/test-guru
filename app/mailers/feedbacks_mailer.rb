@@ -2,7 +2,7 @@ class FeedbacksMailer < ApplicationMailer
   before_action :find_admin
 
   def feedback(feedback)
-    @user = feedback.user.email
+    @user = feedback.user
     @subject = feedback.title
     @message = feedback.body
 
