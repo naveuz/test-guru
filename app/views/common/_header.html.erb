@@ -4,6 +4,7 @@
     <% if user_signed_in? %>
       <%= t('.welcome') %>
       <b><%= current_user.email %></b> |
+      <%=link_to t('.feedback'), new_feedback_path %> |
       <% if current_user.admin? %>
         <%= link_to t('.panel'), admin_root_path %> |
       <% end %>

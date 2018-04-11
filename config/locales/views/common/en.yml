@@ -18,6 +18,7 @@ en:
       logout: 'Logout'
       signup: 'Registration'
       panel: 'Admin Panel'
+      feedback: 'Feedback'
     footer:
       author: 'Alexander Zuev'
       school: 'Online school Thinknetica'

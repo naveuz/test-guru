@@ -18,13 +18,14 @@ ru:
       login: 'Войти'
       logout: 'Выйти'
       signup: 'Регистрация'
-      panel: "Панель Администратора"
+      panel: 'Панель Администратора'
+      feedback: 'Обратная связь'
     footer:
       author: 'Александр Зуев'
       school: 'Онлайн школа Thinknetica'
 
   admin:
     header:
-      panel: "Панель Администратора"
+      panel: 'Панель Администратора'
       logout: 'Выйти'
       header: 'Тест Гуру'

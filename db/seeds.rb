@@ -7,13 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 users = User.create([
-     { name: 'User1', email: 'test@test.net', password: '123456' },
-     { name: 'User2', email: 'info@info.com', password: 'abcde' }
-                    ])
-
-admins = Admin.create([
-     { name: 'admin1', email: 'test@test.net', password: '123456' },
-     { name: 'admin2', email: 'info@info.com', password: 'abcde' }
+     { first_name: 'User1', last_name: 'User1', email: 'test@test.net',
+       password: '123456', password_confirmation: '123456' },
+     { first_name: 'User2', last_name: 'User2', email: 'info@info.com',
+       password: 'abcde', password_confirmation: 'abcde' }
                     ])
 
 categories = Category.create([{title: 'Литература'},
@@ -21,9 +18,9 @@ categories = Category.create([{title: 'Литература'},
                               {title: 'География'}])
 
 tests = Test.create([
-     { title: 'Русские писатели', level: 1, category_id: categories[0].id, admin_id: admins[0].id },
-     { title: 'Исторические даты', level: 2, category_id: categories[1].id, admin_id: admins[0].id },
-     { title: 'Столицы стран мира', level: 3, category_id: categories[2].id, admin_id: admins[1].id }
+     { title: 'Русские писатели', level: 1, category_id: categories[0].id, author_id: users[0].id },
+     { title: 'Исторические даты', level: 2, category_id: categories[1].id, author_id: users[0].id },
+     { title: 'Столицы стран мира', level: 3, category_id: categories[2].id, author_id: users[1].id }
                     ])
 
 questions = Question.create([

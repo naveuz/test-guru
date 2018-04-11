@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180330135608) do
+ActiveRecord::Schema.define(version: 20180410062032) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
     t.string "body", null: false
@@ -18,6 +21,7 @@ ActiveRecord::Schema.define(version: 20180330135608) do
     t.integer "question_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -26,12 +30,23 @@ ActiveRecord::Schema.define(version: 20180330135608) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "feedbacks", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "body", null: false
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_feedbacks_on_user_id"
+  end
+
   create_table "gists", force: :cascade do |t|
     t.string "url"
     t.integer "question_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_gists_on_question_id"
+    t.index ["user_id"], name: "index_gists_on_user_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -39,6 +54,7 @@ ActiveRecord::Schema.define(version: 20180330135608) do
     t.integer "test_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["test_id"], name: "index_questions_on_test_id"
   end
 
   create_table "test_passages", force: :cascade do |t|
@@ -60,6 +76,7 @@ ActiveRecord::Schema.define(version: 20180330135608) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "author_id"
+    t.index ["author_id"], name: "index_tests_on_author_id"
     t.index ["title", "level"], name: "index_tests_on_title_and_level", unique: true
   end
 

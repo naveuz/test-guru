@@ -1,0 +1,20 @@
+<div class="row justify-content-center mt-5">
+  <div class="col col-md-4">
+    <h1 class="text-center"><%= t('.header') %></h1>
+    <%= form_with model: @feedback, local: true do |form| %>
+    <%= render 'common/errors', resource: @feedback %>
+      <div class="form-group">
+        <p>
+          <%= form.label :title %><br>
+          <%= form.text_field :title, class: "form-control" %>
+        </p>
+        <p>
+          <%= form.label :body %>
+          <%= form.text_area :body, rows: 5, class: "form-control" %>
+        </p>
+
+        <%= form.submit class: "btn btn-primary btn-block" %>
+      </div>
+    <% end %>
+  </div>
+</div>
