@@ -6,7 +6,7 @@ class TestPassage < ApplicationRecord
   before_save :before_save_set_question
   before_update :before_update_test_passed
 
-  scope :test_passed, -> { where(passed: true) }
+  scope :passed, -> { where(passed: true) }
 
   def success_percent
     self.correct_questions * 100 / question_count
