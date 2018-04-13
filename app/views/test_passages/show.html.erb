@@ -1,7 +1,8 @@
 <h5 class="my-3">Прохождение теста: <%= @test_passage.test.title %></h5>
 <p>
   Вопрос <%= @test_passage.question_number %> из
-         <%= @test_passage.question_count %>
+         <%= @test_passage.question_count %> |
+  Осталось времени: <%= content_tag :span, '', class: 'timer', data: { time: @test_passage.timer } %>
 </p>
 <%= content_tag :progress, '', class: 'progress', value: '0', max: '100',
                 data: { question_number: @test_passage.question_number,
@@ -18,7 +19,7 @@
   <% end %>
   <p><%= link_to 'Gist question', gist_test_passage_path(@test_passage), method: :post %></p>
   <p>
-    <%= link_to 'Отмена', tests_path, class: "btn btn-warning text-white" %>
+    <%= link_to 'Отмена', tests_path, class: "cancel btn btn-warning text-white" %>
     <%= form.submit 'Следующий', class: "btn btn-success" %>
   </p>
 <% end %>

@@ -5,6 +5,7 @@ class TestPassage < ApplicationRecord
 
   before_save :before_save_set_question
   before_update :before_update_test_passed
+  before_update :before_update_check_time
 
   scope :passed, -> { where(passed: true) }
 
@@ -33,7 +34,23 @@ class TestPassage < ApplicationRecord
     save!
   end
 
+  def timer
+    (time_end - Time.current).to_i
+  end
+
   private
+
+  def time_end
+    created_at + test.duration.minutes
+  end
+
+  def time_over?
+    time_end < Time.current
+  end
+
+  def before_update_check_time
+    self.current_question = nil if time_over?
+  end
 
   def before_update_test_passed
     self.passed = passed? if completed?
@@ -48,6 +65,7 @@ class TestPassage < ApplicationRecord
   end
 
   def correct_answer?(answer_ids)
+    answer_ids ||= []
     correct_answers.ids.sort == answer_ids.map(&:to_i).sort
   end
 
