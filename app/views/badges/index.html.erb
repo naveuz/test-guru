@@ -1,0 +1,10 @@
+<h3 class="my-3"><%= t('.my_badges') %></h3>
+<% current_user.badges.each do |badge| %>
+  <div class="mb-3">
+    <%= image_tag badge.image, class: 'max-size' %>
+    <%= badge.title %>
+  </div>
+<% end %>
+<h3 class="my-3"><%= t('.all_badges') %></h3>
+<%= render @badges %>
+<%= link_to t('.back'), root_path %>

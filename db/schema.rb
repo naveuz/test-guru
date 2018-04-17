@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180410062032) do
+ActiveRecord::Schema.define(version: 20180413161432) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20180410062032) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "badges", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "image", null: false
+    t.string "rule"
+    t.string "rule_option"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "categories", force: :cascade do |t|
@@ -64,6 +73,7 @@ ActiveRecord::Schema.define(version: 20180410062032) do
     t.integer "correct_questions", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "passed", default: false
     t.index ["current_question_id"], name: "index_test_passages_on_current_question_id"
     t.index ["test_id"], name: "index_test_passages_on_test_id"
     t.index ["user_id"], name: "index_test_passages_on_user_id"
@@ -75,9 +85,19 @@ ActiveRecord::Schema.define(version: 20180410062032) do
     t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "author_id"
+    t.integer "author_id"
+    t.integer "duration"
     t.index ["author_id"], name: "index_tests_on_author_id"
     t.index ["title", "level"], name: "index_tests_on_title_and_level", unique: true
+  end
+
+  create_table "user_badges", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "badge_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["badge_id"], name: "index_user_badges_on_badge_id"
+    t.index ["user_id"], name: "index_user_badges_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

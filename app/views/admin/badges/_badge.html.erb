@@ -1,0 +1,13 @@
+<tr>
+  <td><%= badge.title %></td>
+  <td><%= image_tag(badge.image, class: 'min-size') %></td>
+  <td><%= badge.rule %></td>
+  <td><%= badge.rule_option %></td>
+  <td>
+    <%= link_to t('.edit'), edit_admin_badge_path(badge),
+                            class: "btn btn-success btn-sm" %>
+    <%= link_to t('.destroy'), admin_badge_path(badge), class: "btn btn-danger btn-sm",
+                                method: :delete,
+                                data: { confirm: t('.confirm') } %>
+  </td>
+</tr>

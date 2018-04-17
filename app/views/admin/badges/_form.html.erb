@@ -1,0 +1,23 @@
+<%= form_with model: [:admin, @badge], local: true do |form| %>
+  <%= render 'common/errors', resource: @badge %>
+  <div class="form-group col-4">
+    <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :title, class: "form-control" %>
+    </p>
+    <p>
+      <%= form.label :image %>
+      <%= form.text_field :image, class: "form-control" %>
+    </p>
+    <p>
+      <%= form.label :rule %>
+      <%= form.text_field :rule, class: "form-control" %>
+    </p>
+    <p>
+      <%= form.label :rule_option %>
+      <%= form.text_field :rule_option, class: "form-control" %>
+    </p>
+
+    <%= form.submit class: "btn btn-success" %>
+  </div>
+<% end %>

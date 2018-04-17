@@ -10,7 +10,7 @@ users = User.create([
      { first_name: 'User1', last_name: 'User1', email: 'test@test.net',
        password: '123456', password_confirmation: '123456' },
      { first_name: 'User2', last_name: 'User2', email: 'info@info.com',
-       password: 'abcde', password_confirmation: 'abcde' }
+       password: '123456', password_confirmation: '123456' }
                     ])
 
 categories = Category.create([{title: 'Литература'},
